@@ -1,6 +1,10 @@
 ## Implementation of RoBERT and ToBERT for Rumour Detection
 
 ### 0. Requirements
+* **Datasets Download**
+  * https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing
+* **Trained Models Download**
+  * https://drive.google.com/drive/folders/1VEtruvbJ9eRMC4BttXgvz9A0h76HgUIP?usp=sharing
 
 ### 1. Usage Guide
 
