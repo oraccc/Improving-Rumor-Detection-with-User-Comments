@@ -1,8 +1,8 @@
-### Implementation of RoBERT and ToBERT for Rumour Detection
+## Implementation of RoBERT and ToBERT for Rumour Detection
 
-#### 0. Requirements
+### 0. Requirements
 
-#### 1. Usage Guide
+### 1. Usage Guide
 
 * **Data_Preprocess.ipynb**
   * This notebook will preprocess the original dataset and generate a **'.csv'** file in **'./data'** folder. Our model will only accept the '.csv' file as input. 
@@ -30,7 +30,7 @@
 
 
 
-#### 2. Parameter Settings for Different Models
+### 2. Parameter Settings for Different Models
 
 * **text_comments** (Default)
 
