@@ -6,7 +6,7 @@
 
 * **Data_Preprocess.ipynb**
   * This notebook will preprocess the original dataset and generate a **'.csv'** file in **'./data'** folder. Our model will only accept the '.csv' file as input. 
-  * I have already generated a **'raw_data.csv'** file so there is no need to collect the dataset and run this notebook again.  Just download the csv file and head to 'Rumour_BERT.ipynb' and run the model.
+  * I have already generated a **'raw_data.csv'** file so there is no need to collect the dataset and run this notebook again.  Just download the csv file ,head to 'Rumour_BERT.ipynb' and run the model.
 
 * **Rumour_BERT.ipynb**
 
