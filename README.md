@@ -1,5 +1,8 @@
 ## Implementation of RoBERT and ToBERT for Rumour Detection
 
+### Overall Structure
+
+
 ### 0. Requirements
 * **Datasets Download**
   * https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing
