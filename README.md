@@ -2,6 +2,7 @@
 
 ### 0. Overall Structure
 
+<img src="./images/Overall Structure.png" alt="Overall Structure" style="zoom: 67%;" />
 
 ### 1. Requirements
 * **Datasets Download**
