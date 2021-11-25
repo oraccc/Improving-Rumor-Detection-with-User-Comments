@@ -1,6 +1,6 @@
 ## Implementation of RoBERT and ToBERT for Rumour Detection
 
-### 0. Overall Structure
+### 0. Overall Structure for Our Rumour Detection Model
 
 <img src="./images/Overall Structure.png" alt="Overall Structure" style="zoom: 50%;" />
 
