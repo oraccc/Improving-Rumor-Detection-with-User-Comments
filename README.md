@@ -1,9 +1,9 @@
 ## Implementation of RoBERT and ToBERT for Rumour Detection
 
-### Overall Structure
+### 0. Overall Structure
 
 
-### 0. Requirements
+### 1. Requirements
 * **Datasets Download**
   * https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing
 * **Trained Models Download**
@@ -18,7 +18,7 @@
   * transformers 4.9.2
   * scikit-learn 0.24.2
 
-### 1. Usage Guide
+### 2. Usage Guide
 
 * **Data_Preprocess.ipynb**
   * This notebook will preprocess the original dataset and generate a **'.csv'** file in **'./data'** folder. Our model will only accept the '.csv' file as input. 
@@ -46,7 +46,7 @@
 
 
 
-### 2. Parameter Settings for Different Models
+### 3. Parameter Settings for Different Models
 
 * **text_comments** (Default)
 
