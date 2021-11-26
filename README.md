@@ -144,3 +144,11 @@
   
   * In Step 1.2, Use **'get_natural_split'** function rather than 'get_split', please don't forget to comment the other code line.
 
+### 4. Results
+* PHEME Dataset
+
+  |        | Accuracy    | Precision   | Recall      | F1-Score    |
+  | ------ | ----------- | ----------- | ----------- | ----------- |
+  | RoBERT | 0.96301     | 0.94521     | **0.94694** | 0.94607     |
+  | ToBERT | 0.96287**** | **0.95118** | 0.94283     | **0.94670** |
+
