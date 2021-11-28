@@ -2,7 +2,7 @@
 
 ### 0. Overall Structure of Our Rumour Detection Model
 
-<img src="./images/Overall Structure.png" alt="Overall Structure" style="zoom: 50%;" />
+<img src="./images/Overall Structure.png" alt="Overall Structure" style="zoom: 40%;" />
 
 ### 1. Requirements
 * **Datasets Download**
