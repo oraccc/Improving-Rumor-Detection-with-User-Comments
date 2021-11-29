@@ -11,7 +11,7 @@
   * https://drive.google.com/drive/folders/1VEtruvbJ9eRMC4BttXgvz9A0h76HgUIP?usp=sharing
 * **Python Enviroments**
   * python 3.7
-  * numpy 1.21.2
+  * numpy 1.18.5
   * pandas 1.3.1
   * pytorch 1.7.0
   * torchtext 0.6.0
