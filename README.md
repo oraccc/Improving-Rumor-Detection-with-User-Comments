@@ -1,10 +1,10 @@
 ## Implementation of RoBERT and ToBERT for Rumour Detection
 
-### 0. Overall Structure of Our Rumour Detection Model
+### 1. Overall Structure of Our Rumour Detection Model
 
 <img src="./images/Overall Structure.png" alt="Overall Structure" style="zoom: 40%;" />
 
-### 1. Requirements
+### 2. Requirements
 * **Datasets Download**
   * https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing
 * **Trained Models Download**
@@ -19,7 +19,7 @@
   * transformers 4.9.2
   * scikit-learn 0.24.2
 
-### 2. Usage Guide
+### 3. Usage Guide
 
 * **Data_Preprocess.ipynb**
   * This notebook will preprocess the original dataset and generate a **'.csv'** file in **'./data'** folder. Our model will only accept the '.csv' file as input. 
@@ -47,7 +47,7 @@
 
 
 
-### 3. Parameter Settings for Different Models
+### 4. Parameter Settings for Different Models
 
 * **text_comments** (Default)
 
@@ -144,7 +144,7 @@
   
   * In Step 1.2, Use **'get_natural_split'** function rather than 'get_split', please don't forget to comment the other code line.
 
-### 4. Results
+### 5. Results
 * PHEME Dataset
 
   |        | Accuracy    | Precision   | Recall      | F1-Score    |
