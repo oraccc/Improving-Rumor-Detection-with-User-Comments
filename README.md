@@ -1,10 +1,10 @@
-## Implementation of RoBERT and ToBERT for Rumour Detection
+## Improving Rumour Detection with User Comments
 
-### 1. Overall Structure of Our Rumour Detection Model
+### 1. Introduction
 
 <img src="./images/Overall Structure.png" alt="Overall Structure" style="zoom: 40%;" />
 
-### 2. Requirements
+### 2. Implementation Requirements
 * **Datasets Download**
   * https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing
 * **Trained Models Download**
