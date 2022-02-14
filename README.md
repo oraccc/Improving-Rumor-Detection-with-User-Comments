@@ -1,25 +1,33 @@
 ## Improving Rumour Detection with User Comments
 
+
+
 ### 1. Project Introduction
 
 - In this project, we propose a new **BERT-based** rumour detection method considering **both the original post and the associated comments**. 
 - The method starts with concatenation of the original post and the associated comments to form a single long text, which is then segmented into shorter sequential chunks more suitable for BERT-based vectorization. Features extracted by applying BERT to all the trunks are fed into an LSTM- or transformer-based classifier for the binary ('rumour' or 'non-rumour') classification task. 
 - The experimental results on **PHEME** and **Ma-Weibo**, two public rumour detection datasets representing the two most spoken languages -- English and Chinese --  and two of the largest Web 2.0 platforms -- Twitter and Sina Weibo, showed that our method outperformed other state-of-the-art methods, mostly with a significant margin.
 
-### 2. Implementation Requirements
-* **Datasets Download Link** 
-  * https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing
-* **Trained Models Download Link**
-  * https://drive.google.com/drive/folders/1VEtruvbJ9eRMC4BttXgvz9A0h76HgUIP?usp=sharing
-* **Python Enviroments**
+### 2. Implementation Requirements & Preparations
+
+* **Data Preparations (Not Necessary)**
+
+  Please download the datasets and trained models from the google drive links below and place these file folders in the corresponding working directories. 
+
+  * Datasets Download Link 
+    * https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing
+
+  * Trained Models Download Link
+    * https://drive.google.com/drive/folders/1VEtruvbJ9eRMC4BttXgvz9A0h76HgUIP?usp=sharing
+
+
+* **Recommended Environments to Run Codes (Win/Linux)**
   * python 3.7
   * numpy 1.18.5
-  * pandas 1.3.1
   * pytorch 1.7.0
   * torchtext 0.6.0
   * tensorflow 2.0.0
   * transformers 4.9.2
-  * scikit-learn 0.24.2
 
 ### 3. Usage Guide
 
