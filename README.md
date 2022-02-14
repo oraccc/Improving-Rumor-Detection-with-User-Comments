@@ -14,11 +14,9 @@
 
   Please download the datasets and trained models from the google drive links below and place these file folders in the corresponding working directories. 
 
-  * Datasets Download Link 
-    * https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing
+  * [Datasets Download Link](https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing)
 
-  * Trained Models Download Link (Not Necessary)
-    * https://drive.google.com/drive/folders/1VEtruvbJ9eRMC4BttXgvz9A0h76HgUIP?usp=sharing
+  * [Trained Models Download Link](https://drive.google.com/drive/folders/1VEtruvbJ9eRMC4BttXgvz9A0h76HgUIP?usp=sharing) (Not Necessary)
 
 
 * **Recommended Environments to Run Codes (Win/Linux)**
