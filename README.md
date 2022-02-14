@@ -1,13 +1,15 @@
 ## Improving Rumour Detection with User Comments
 
-### 1. Introduction
+### 1. Project Introduction
 
-<img src="./images/Overall Structure.png" alt="Overall Structure" style="zoom: 40%;" />
+- In this project, we propose a new **BERT-based** rumour detection method considering **both the original post and the associated comments**. 
+- The method starts with concatenation of the original post and the associated comments to form a single long text, which is then segmented into shorter sequential chunks more suitable for BERT-based vectorization. Features extracted by applying BERT to all the trunks are fed into an LSTM- or transformer-based classifier for the binary ('rumour' or 'non-rumour') classification task. 
+- The experimental results on **PHEME** and **Ma-Weibo**, two public rumour detection datasets representing the two most spoken languages -- English and Chinese --  and two of the largest Web 2.0 platforms -- Twitter and Sina Weibo, showed that our method outperformed other state-of-the-art methods, mostly with a significant margin.
 
 ### 2. Implementation Requirements
-* **Datasets Download**
+* **Datasets Download Link** 
   * https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing
-* **Trained Models Download**
+* **Trained Models Download Link**
   * https://drive.google.com/drive/folders/1VEtruvbJ9eRMC4BttXgvz9A0h76HgUIP?usp=sharing
 * **Python Enviroments**
   * python 3.7
