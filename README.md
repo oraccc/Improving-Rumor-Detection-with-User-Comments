@@ -47,18 +47,11 @@ There are two jupyter notebooks in each folder. The *"Data_Preprocess.ipynb"* no
   There are 7 steps in this jupyter notebook, the final result is in Step 6 (RoBERT) and Step 7 (ToBERT) output, measured with four indicators (i.e., *accuracy*, *precision*, *recall* and *f1-score*).
 
   * Step 1: Process the *"raw_data.csv"* and generate the original train and test data.
-
   * Step 2: Define and construct the BERT model for text classification.
-
   * Step 3 & 4: Fine-tune, train and evaluate the BERT model.
-
   * Step 5: Get the text embeddings and prepare datas for the final classification model.
-
   * Step 6: Construct, train and evaluate the **RoBERT** (Recurrence over BERT).
-
   * Step 7: Construct, train and evaluate the **ToBERT** (Transformer over BERT).
-
-    ---
 
   *Some Extra Explanations:*
 
@@ -67,48 +60,45 @@ There are two jupyter notebooks in each folder. The *"Data_Preprocess.ipynb"* no
     - *Place my trained model (links above) in "**./trained_models**" folder.*
     - ***Skip Step 3 & Step 4**.*
 
+---
 
+### 4. Settings for Different Model Path (Additional Experiments)
 
-### 4. Parameter Settings for Different Models
+We conducted additional experiments on different settings of our proposed method to study diferent aspects of the role comments play in the rumour detection task. These additional experiments led to some very interesting findings, including further evidence that including the associated comments is beneficial, the surprising result that fixed-length segmentation with an overlap is better than natural segmentation, and the observation that the more comments the better the detector's performance. 
 
-* **text_comments** (Default)
+To reproduce these experiment results, please change the **'model_name'** in "Rumour_BERT.ipynb" to coressponding values. Optional values and the settings are listed below.
 
-  * Set the 'model_path' to **'text_comments'** (Default).
+* **text_comments** (Default), **text_only**, **comments_only**
 
-  * **Don't** uncomment lines in Cell *"\## Different Number of Comments ##"*.
+  * Set the 'model_path' to **'text_comments'** (Default), **'text_comments'** or **'comments_only'**.
 
-  * Use the following lines in Cell *"\## Data Selection ##"*.
+  * Use the following lines in notebook cell *"\## Data Selection ##"*.
 
-    ```python
-    raw_data = raw_data[['text_comments','label']]
-    raw_data = raw_data.rename(columns = {'text_comments':'text'})
-    ```
-
-* **text_only, comments_only**
-
-  * Set the 'model_path' to **'text_comments'** or **'comments_only'**.
-
-  * **Don't** uncomment lines in Cell *"\## Different Number of Comments ##"*.
-
-  * Use the following lines in Cell *"\## Data Selection ##"*. Don't forget to comment the rest lines in the cell.
-
+    * text_comments
+    
+      ```python
+      raw_data = raw_data[['text_comments','label']]
+      raw_data = raw_data.rename(columns = {'text_comments':'text'})
+      ```
+    
     * text_only
-
+    
       ```python
       raw_data = raw_data[['text_only','label']]
       raw_data = raw_data.rename(columns = {'text_only':'text'})
       ```
-
+    
+    
     * comments_only
-
+    
       ```python
       raw_data = raw_data[['comments_only','label']]
       raw_data = raw_data.rename(columns = {'comments_only':'text'})
       ```
-
+    
       
 
-* **comments_group1, comments_group2, comments_group3**
+* **comments_group1**, **comments_group2**, **comments_group3**
 
   * Set the 'model_path' to **'comments_group1'**, **'comments_group2'** or **'comments_group3'**.
 
@@ -146,27 +136,15 @@ There are two jupyter notebooks in each folder. The *"Data_Preprocess.ipynb"* no
       raw_data = raw_data[raw_data['count'] > 18]
       ```
 
-  * Use the following lines in Cell *"\## Data Selection ##"*.
-
-    ```python
-    raw_data = raw_data[['text_comments','label']]
-    raw_data = raw_data.rename(columns = {'text_comments':'text'})
-    ```
-
-* **natural_split**
-  * Set the 'model_path' to **'natural_split'**.
-  * **Don't** uncomment lines in Cell *"\## Different Number of Comments ##"*.
-
-  * Use the following lines in Cell *"\## Data Selection ##"*.
-
-    ```python
-    raw_data = raw_data[['text_comments','label']]
-    raw_data = raw_data.rename(columns = {'text_comments':'text'})
-    ```
+* **natural_split**, **fixed_split**
   
-  * In Step 1.2, Use **'get_natural_split'** function rather than 'get_split', please don't forget to comment the other code line.
+  * Set the 'model_path' to **'natural_split'** or **"fixed_split"**.
+  * In Step 1.2, Use **'get_natural_split'** or **'get_fixed_split'** function rather than 'get_split'.
+
+---
 
 ### 5. Results
+
 * PHEME Dataset
 
   |        | Accuracy    | Precision   | Recall      | F1-Score    |
