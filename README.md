@@ -8,6 +8,8 @@
 - The method starts with concatenation of the original post and the associated comments to form a single long text, which is then segmented into shorter sequential chunks more suitable for BERT-based vectorization. Features extracted by applying BERT to all the trunks are fed into an LSTM- or transformer-based classifier for the binary (i.e., *'rumour'* or *'non-rumour'*) classification task. 
 - The experimental results on **PHEME** and **Ma-Weibo**, two public rumour detection datasets representing the two most spoken languages -- English and Chinese --  and two of the largest Web 2.0 platforms -- Twitter and Sina Weibo, showed that our method outperformed other state-of-the-art methods, mostly with a significant margin.
 
+---
+
 ### 2. Implementation Requirements & Preparations
 
 * **Data Preparations**
@@ -27,33 +29,41 @@
   * tensorflow 2.0.0
   * transformers 4.9.2
 
+---
+
 ### 3. Implemetation Guide
 
 There are two jupyter notebooks in each folder. The *"Data_Preprocess.ipynb"* notebook converted the original dataset (i.e., Ma-Weibo and PHEME) to *"raw_data.csv"* files, while the *"Rumour_BERT.ipynb"* performed the rumour detection and binary (i.e., *'rumour'* or *'non-rumour'*) classification task. The specific introduction is as follows.
 
 * **Data_Preprocess.ipynb**
+
   * This notebook preprocessed the original dataset and generated a *".csv"* file in *"./data"'* folder. 
   * A **'raw_data.csv'** file has already been generated in each folder in [datasets download link](https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing), so you may alternatively skip this notebook after download the dataset and proceed to *"Rumour_BERT.ipynb"*.
 
----
+  ---
 
 * **Rumour_BERT.ipynb**
 
   There are 7 steps in this jupyter notebook, the final result is in Step 6 (RoBERT) and Step 7 (ToBERT) output, measured with four indicators (i.e., *accuracy*, *precision*, *recall* and *f1-score*).
 
   * Step 1: Process the *"raw_data.csv"* and generate the original train and test data.
+
   * Step 2: Define and construct the BERT model for text classification.
+
   * Step 3 & 4: Fine-tune, train and evaluate the BERT model.
+
   * Step 5: Get the text embeddings and prepare datas for the final classification model.
+
   * Step 6: Construct, train and evaluate the **RoBERT** (Recurrence over BERT).
+
   * Step 7: Construct, train and evaluate the **ToBERT** (Transformer over BERT).
 
-  ---
+    ---
 
   *Some Extra Explanations:*
 
   - *The accuracy result in Step 4 is only for the BERT model, it is **NOT** the final result.*
-  - *You could alternatively use my own "pre-trained"  BERT models so you don't have to train and fine-tune the BERT model again, and only need to evaluate the RoBERT and ToBERT part, which could save you a lot of time :)*
+  - *You could alternatively use my own "pre-trained"  BERT models so you don't have to train and fine-tune the BERT model again.*
     - *Place my trained model (links above) in "**./trained_models**" folder.*
     - ***Skip Step 3 & Step 4**.*
 
