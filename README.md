@@ -158,7 +158,7 @@ To reproduce these experiment results, please change the **'model_name'** in "Ru
     To further demonstrate that the effect of the number of comments on the accuracy of rumour detection is statistically significant, we performed ANOVA tests on the three data groups for each dataset. Here, our variable *X* is the range of comments number in each data group, and the response data *Y* is the accuracy of the corresponding rumour detection.We set α value to **0.001**. 
 
     | Method | PHEME Dataset p-value | Ma-Weibo Dataset p-value |
-    | ------ | --------------------- | ------------------------ |
+    | :----: | :----------: | :----------: |
     | RoBERT | 3.27E-8               | 4.76E-16                 |
     | ToBERT | 4.10E-8               | 3.29E-16                 |
 
