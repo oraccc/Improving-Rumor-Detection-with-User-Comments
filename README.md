@@ -145,16 +145,15 @@ To reproduce these experiment results, please change the **'model_name'** in "Ru
 
 ### 5. Results
 
-* PHEME Dataset
+* **Rumour Detection Results with Different Settings of Using the Original Post and the Associated Comments**
 
-  |        | Accuracy    | Precision   | Recall      | F1-Score    |
-  | ------ | ----------- | ----------- | ----------- | ----------- |
-  | RoBERT | 0.96301     | 0.94521     | **0.94694** | 0.94607     |
-  | ToBERT | **0.96287** | **0.95118** | 0.94283     | **0.94670** |
+  <img src="./images/result1.png" alt="result1" style="zoom: 80%;" />
 
-* Ma-Weibo
+* **Rumour Detection Results with Different Number of Comments**
 
-  |        | Accuracy    | Precision   | Recall      | F1-Score    |
-  | ------ | ----------- | ----------- | ----------- | ----------- |
-  | RoBERT | 0.98075     | **0.97252** | 0.98785     | 0.98011     |
-  | ToBERT | **0.98128** | 0.97185     | **0.99022** | **0.98093** |
+  <img src="./images/result2.png" alt="result2" style="zoom:80%;" />
+
+* **Rumour Detection Results with Different Segmentation Methods**
+
+  <img src="./images/result3.png" alt="result3" style="zoom:80%;" />
+
