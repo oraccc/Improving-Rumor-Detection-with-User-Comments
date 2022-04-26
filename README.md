@@ -1,4 +1,4 @@
-## Improving Rumour Detection with User Comments
+## Improving Rumor Detection with User Comments
 
 
 
@@ -141,29 +141,5 @@ To reproduce these experiment results, please change the **'model_name'** in "Ru
   * Set the 'model_path' to **'natural_split'** or **"fixed_split"**.
   * In Step 1.2, Use **'get_natural_split'** or **'get_fixed_split'** function rather than 'get_split'.
 
----
-
-### 5. Results
-
-* **Rumour Detection Results with Different Settings of Using the Original Post and the Associated Comments**
-
-  <img src="./images/result1.png" alt="result1" style="zoom: 80%;" />
-
-* **Rumour Detection Results with Different Number of Comments**
-
-  <img src="./images/result2.png" alt="result2" style="zoom:80%;" />
-
-  * **One-way ANOVA (Analysis of Variance) Verification**
-
-    To further demonstrate that the effect of the number of comments on the accuracy of rumour detection is statistically significant, we performed ANOVA tests on the three data groups for each dataset. Here, our variable *X* is the range of comments number in each data group, and the response data *Y* is the accuracy of the corresponding rumour detection.We set α value to **0.001**. 
-
-    | Method | PHEME Dataset p-value | Ma-Weibo Dataset p-value |
-    | :----: | :----------: | :----------: |
-    | RoBERT | 3.27E-8               | 4.76E-16                 |
-    | ToBERT | 4.10E-8               | 3.29E-16                 |
-
-
-* **Rumour Detection Results with Different Segmentation Methods**
-
-  <img src="./images/result3.png" alt="result3" style="zoom:80%;" />
+### 
 
