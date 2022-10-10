@@ -12,7 +12,7 @@
 
 - Model Structure Overall
 
-  ![](.\images\Overall Structure.png)
+  ![](.\images\Overall-Structure.png)
 
 ---
 
