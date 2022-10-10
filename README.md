@@ -25,24 +25,24 @@
 
   ```shell
   ├─images
-  |  └─***.png
+  │  └─***.png
   ├─Ma-Weibo
-  |  ├-Data_preprocess.ipynb
-  |  ├-Rumor_BERT.ipynb
-  |  ├-utils.py
+  │  ├─Data_preprocess.ipynb
+  │  ├─Rumor_BERT.ipynb
+  │  ├─utils.py
   │  ├─data
-  |  |  └─raw_data.csv
+  │  │  └─raw_data.csv
   │  └─trained_models
-  |     |─classification_models_text_comments
-  |     └─...
+  │     ├─classification_models_text_comments
+  │     └─...
   └─PHEME-RNR
-      ├-Data_preprocess.ipynb
-      ├-Rumor_BERT.ipynb
-      ├-utils.py
+      ├─Data_preprocess.ipynb
+      ├─Rumor_BERT.ipynb
+      ├─utils.py
       ├─data
-      |  └─raw_data.csv
+      │  └─raw_data.csv
       └─trained_models
-         |─classification_models_text_comments
+         ├─classification_models_text_comments
          └─...
   ```
 
