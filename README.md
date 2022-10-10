@@ -5,8 +5,14 @@
 ### 1. Project Introduction
 
 - In this project, we propose a new **BERT-based** rumor detection method considering **both the original post and the associated comments**. 
+
 - The method starts with concatenation of the original post and the associated comments to form a single long text, which is then segmented into shorter sequential chunks more suitable for BERT-based vectorization. Features extracted by applying BERT to all the trunks are fed into an LSTM- or Transformer-based classifier for the binary (i.e., `"rumor"` or `"non-rumor"`) classification task. 
+
 - The experimental results on **PHEME** and **Ma-Weibo**, two public rumor detection datasets representing the two most spoken languages -- English and Chinese --  and two of the largest Web 2.0 platforms -- Twitter and Sina Weibo, showed that our method outperformed other state-of-the-art methods, mostly with a significant margin.
+
+- Model Structure Overall
+
+  ![](.\images\Overall Structure.png)
 
 ---
 
