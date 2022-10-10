@@ -4,9 +4,9 @@
 
 ### 1. Project Introduction
 
-- In this project, we propose a new **BERT-based** rumour detection method considering **both the original post and the associated comments**. 
-- The method starts with concatenation of the original post and the associated comments to form a single long text, which is then segmented into shorter sequential chunks more suitable for BERT-based vectorization. Features extracted by applying BERT to all the trunks are fed into an LSTM- or transformer-based classifier for the binary (i.e., *'rumour'* or *'non-rumour'*) classification task. 
-- The experimental results on **PHEME** and **Ma-Weibo**, two public rumour detection datasets representing the two most spoken languages -- English and Chinese --  and two of the largest Web 2.0 platforms -- Twitter and Sina Weibo, showed that our method outperformed other state-of-the-art methods, mostly with a significant margin.
+- In this project, we propose a new **BERT-based** rumor detection method considering **both the original post and the associated comments**. 
+- The method starts with concatenation of the original post and the associated comments to form a single long text, which is then segmented into shorter sequential chunks more suitable for BERT-based vectorization. Features extracted by applying BERT to all the trunks are fed into an LSTM- or Transformer-based classifier for the binary (i.e., `"rumor"` or `"non-rumor"`) classification task. 
+- The experimental results on **PHEME** and **Ma-Weibo**, two public rumor detection datasets representing the two most spoken languages -- English and Chinese --  and two of the largest Web 2.0 platforms -- Twitter and Sina Weibo, showed that our method outperformed other state-of-the-art methods, mostly with a significant margin.
 
 ---
 
@@ -18,10 +18,38 @@
 
   * [Datasets Download Link](https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing)
 
-  * [Trained Models Download Link](https://drive.google.com/drive/folders/1VEtruvbJ9eRMC4BttXgvz9A0h76HgUIP?usp=sharing) (Not Necessary)
+  * [Trained Models Download Link](https://drive.google.com/drive/folders/1VEtruvbJ9eRMC4BttXgvz9A0h76HgUIP?usp=sharing) 
 
+* **Folder Structure**
+
+
+  ```shell
+  ├─images
+  |  └─***.png
+  ├─Ma-Weibo
+  |  ├-Data_preprocess.ipynb
+  |  ├-Rumor_BERT.ipynb
+  |  ├-utils.py
+  │  ├─data
+  |  |  └─raw_data.csv
+  │  └─trained_models
+  |     |─classification_models_text_comments
+  |     └─...
+  └─PHEME-RNR
+      ├-Data_preprocess.ipynb
+      ├-Rumor_BERT.ipynb
+      ├-utils.py
+      ├─data
+      |  └─raw_data.csv
+      └─trained_models
+         |─classification_models_text_comments
+         └─...
+  ```
+
+  
 
 * **Recommended Environments to Run Codes (Win/Linux)**
+  
   * python 3.7 or higher
   * numpy 1.18.5
   * pytorch 1.7.0 (with CUDA Version 11.5)
@@ -33,16 +61,16 @@
 
 ### 3. Implemetation Guide
 
-There are two jupyter notebooks in each folder. The *"Data_Preprocess.ipynb"* notebook converted the original dataset (i.e., Ma-Weibo and PHEME) to *"raw_data.csv"* files, while the *"Rumour_BERT.ipynb"* performed the rumour detection and binary (i.e., *'rumour'* or *'non-rumour'*) classification task. The specific introduction is as follows.
+There are two jupyter notebooks in each folder. The `"Data_Preprocess.ipynb"` notebook converted the original dataset (i.e., Ma-Weibo and PHEME) to *"raw_data.csv"* files, while the `"Rumor_BERT.ipynb"` performed the rumor detection and binary (i.e., `'rumor'` or `'non-rumor'`) classification task. The specific introduction is as follows.
 
 * **Data_Preprocess.ipynb**
 
   * This notebook preprocessed the original dataset and generated a *".csv"* file in *"./data"'* folder. 
-  * A **'raw_data.csv'** file has already been generated in each folder in [datasets download link](https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing), so you may alternatively skip this notebook after download the dataset and proceed to *"Rumour_BERT.ipynb"*.
+  * A **'raw_data.csv'** file has already been generated in each folder in [datasets download link](https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing), so you may alternatively skip this notebook after download the dataset and proceed to *"Rumor_BERT.ipynb"*.
 
   ---
 
-* **Rumour_BERT.ipynb**
+* **Rumor_BERT.ipynb**
 
   There are 7 steps in this jupyter notebook, the final result is in Step 6 (RoBERT) and Step 7 (ToBERT) output, measured with four indicators (i.e., *accuracy*, *precision*, *recall* and *f1-score*).
 
@@ -64,9 +92,9 @@ There are two jupyter notebooks in each folder. The *"Data_Preprocess.ipynb"* no
 
 ### 4. Settings for Different Model Path (Additional Experiments)
 
-We conducted additional experiments on different settings of our proposed method to study diferent aspects of the role comments play in the rumour detection task. These additional experiments led to some very interesting findings, including further evidence that including the associated comments is beneficial, the surprising result that fixed-length segmentation with an overlap is better than natural segmentation, and the observation that the more comments the better the detector's performance. 
+We conducted additional experiments on different settings of our proposed method to study diferent aspects of the role comments play in the rumor detection task. These additional experiments led to some very interesting findings, including further evidence that including the associated comments is beneficial, the surprising result that fixed-length segmentation with an overlap is better than natural segmentation, and the observation that the more comments the better the detector's performance. 
 
-To reproduce these experiment results, please change the **'model_name'** in "Rumour_BERT.ipynb" to coressponding values. Optional values and the settings are listed below.
+To reproduce these experiment results, please change the **'model_name'** in "Rumor_BERT.ipynb" to coressponding values. Optional values and the settings are listed below.
 
 * **text_comments** (Default), **text_only**, **comments_only**
 
@@ -141,5 +169,5 @@ To reproduce these experiment results, please change the **'model_name'** in "Ru
   * Set the 'model_path' to **'natural_split'** or **"fixed_split"**.
   * In Step 1.2, Use **'get_natural_split'** or **'get_fixed_split'** function rather than 'get_split'.
 
-### 
+
 
