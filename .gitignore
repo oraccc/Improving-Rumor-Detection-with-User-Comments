@@ -1,5 +1,7 @@
-.ipynb_checkpoints/
-__pycache__/
+/Ma-Weibo/.ipynb_checkpoints/
+/PHEME-RNR/.ipynb_checkpoints/
+/Ma-Weibo/__pycache__/
+/PHEME-RNR/__pycache__/
 data/
 trained_models/
 !/PHEME-RNR/data/raw_data.csv
