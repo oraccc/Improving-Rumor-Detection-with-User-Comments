@@ -12,7 +12,7 @@
 
 - Model Structure Overall
 
-  ![](.\images\Overall-Structure.png)
+  ![](https://raw.githubusercontent.com/oraccc/Improving-Rumor-Detection-with-User-Comments/main/images/Overall-Structure.png)
 
 ---
 
