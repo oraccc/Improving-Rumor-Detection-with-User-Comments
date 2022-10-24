@@ -13,7 +13,7 @@
 - Model Structure Overall
 
 <div align=center>
-  <img src="https://raw.githubusercontent.com/oraccc/Improving-Rumor-Detection-with-User-Comments/main/images/Overall-Structure.png" width="800"/>
+  <img src="https://raw.githubusercontent.com/oraccc/Improving-Rumor-Detection-with-User-Comments/main/images/Overall-Structure.png" width="750"/>
 </div>
 
 
