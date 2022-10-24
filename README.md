@@ -11,9 +11,9 @@
 - The experimental results on **PHEME** and **Ma-Weibo**, two public rumor detection datasets representing the two most spoken languages -- English and Chinese --  and two of the largest Web 2.0 platforms -- Twitter and Sina Weibo, showed that our method outperformed other state-of-the-art methods, mostly with a significant margin.
 
 - Model Structure Overall
-
-  ![](https://raw.githubusercontent.com/oraccc/Improving-Rumor-Detection-with-User-Comments/main/images/Overall-Structure.png)
-
+<div align=center>
+  <img src="https://raw.githubusercontent.com/oraccc/Improving-Rumor-Detection-with-User-Comments/main/images/Overall-Structure.png" width="900"/>
+</div>
 ---
 
 ### 2. Implementation Requirements & Preparations
