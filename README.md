@@ -1,6 +1,8 @@
 ## Improving Rumor Detection with User Comments
 
 > Source Code for [TrustCom2022](http://www.ieee-hust-ncc.org/2022/TrustCom/) Accepted Paper " 'Comments Matter and The More The Better': Improving Rumor Detecion with User Comments".
+>
+> [Paper Link](https://ieeexplore.ieee.org/document/10063596)
 
 ### 1. Project Introduction
 
