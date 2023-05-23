@@ -4,19 +4,19 @@
 
 
 
-> Source Code for [TrustCom2022](http://www.ieee-hust-ncc.org/2022/TrustCom/) Accepted Paper " 'Comments Matter and The More The Better': Improving Rumor Detecion with User Comments".
+> 该repo是 [TrustCom2022](http://www.ieee-hust-ncc.org/2022/TrustCom/) 论文 " 'Comments Matter and The More The Better': Improving Rumor Detecion with User Comments" 的源码.
 >
-> [Paper Link](https://ieeexplore.ieee.org/document/10063596)
+> [文章链接](https://ieeexplore.ieee.org/document/10063596)
 
-### 1. Project Introduction
+### 1. 项目介绍
 
-- In this project, we propose a new **BERT-based** rumor detection method considering **both the original post and the associated comments**. 
+- 在这个项目中，我们提出了一种**基于BERT**的谣言检测方法，考虑到**原始帖子和相关评论**的内容。
 
-- The method starts with concatenation of the original post and the associated comments to form a single long text, which is then segmented into shorter sequential chunks more suitable for BERT-based vectorization. Features extracted by applying BERT to all the trunks are fed into an LSTM- or Transformer-based classifier for the binary (i.e., `"rumor"` or `"non-rumor"`) classification task. 
+- 该方法首先将原始帖子和相关评论拼接起来形成一个长文本，然后将其分割成更适合BERT特征化的短序列块。这些短序列块的特征会在拼接后被送到基于LSTM或Transformer的分类器中，用于进行二元（即`"谣言"`或`"非谣言"`）分类任务。
 
-- The experimental results on **PHEME** and **Ma-Weibo**, two public rumor detection datasets representing the two most spoken languages -- English and Chinese --  and two of the largest Web 2.0 platforms -- Twitter and Sina Weibo, showed that our method outperformed other state-of-the-art methods, mostly with a significant margin.
+- 在代表两种最常用语言（英文和中文）和两个最大的Web 2.0平台（Twitter和新浪微博）的公共谣言检测数据集 **PHEME** 和 **Ma-Weibo** 上进行的实验证明，我们的方法在性能表现优于其他SOTA方法，而且优势明显。
 
-- Model Structure Overall
+- 模型整体架构
 
 <div align=center>
   <img src="https://raw.githubusercontent.com/oraccc/Improving-Rumor-Detection-with-User-Comments/main/images/Overall-Structure.png" width="750"/>
