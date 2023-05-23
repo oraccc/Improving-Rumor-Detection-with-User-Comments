@@ -2,10 +2,12 @@
 
 **[English](https://github.com/oraccc/Improving-Rumor-Detection-with-User-Comments/blob/main/README.md)** | **中文**
 
+![PyTroch](https://img.shields.io/badge/PyTorch-1.7.0-brightgreen) ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0.0-green) ![Transformers](https://img.shields.io/badge/Transformers-4.9.2-yellowgreen)
 
 
-> 该repo是 [TrustCom2022](http://www.ieee-hust-ncc.org/2022/TrustCom/) 论文 " 'Comments Matter and The More The Better': Improving Rumor Detecion with User Comments" 的源码.
->
+
+该repo是 [TrustCom2022](http://www.ieee-hust-ncc.org/2022/TrustCom/) 论文 " 'Comments Matter and The More The Better': Improving Rumor Detecion with User Comments" 的源码.
+
 > [文章链接](https://ieeexplore.ieee.org/document/10063596)
 
 ### 1. 项目介绍
