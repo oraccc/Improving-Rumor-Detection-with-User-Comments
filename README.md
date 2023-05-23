@@ -2,7 +2,7 @@
 
 **English** | [**中文**](https://github.com/oraccc/Improving-Rumor-Detection-with-User-Comments/blob/main/README-zh.md)
 
-![PyTroch](https://img.shields.io/badge/PyTorch-1.7.0-brightgreen)![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0.0-green)![Transformers](https://img.shields.io/badge/Transformers-4.9.2-yellowgreen)
+![PyTroch](https://img.shields.io/badge/PyTorch-1.7.0-brightgreen) ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0.0-green) ![Transformers](https://img.shields.io/badge/Transformers-4.9.2-yellowgreen)
 
 
 
