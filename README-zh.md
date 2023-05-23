@@ -25,17 +25,17 @@
 
 ---
 
-### 2. Implementation Requirements & Preparations
+### 2. 代码运行准备
 
-* **Data Preparations**
+* **数据集准备**
 
-  Please download the datasets and trained models from the google drive links below and place these file folders in the corresponding working directories. 
+  请从下面的Google Drive链接下载数据集和训练好的模型，并将这些文件夹放置在相应的工作目录中。
 
-  * [Datasets Download Link](https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing)
+  * [数据集下载链接](https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing)
 
-  * [Trained Models Download Link](https://drive.google.com/drive/folders/1VEtruvbJ9eRMC4BttXgvz9A0h76HgUIP?usp=sharing) 
+  * [训练好的模型下载链接](https://drive.google.com/drive/folders/1VEtruvbJ9eRMC4BttXgvz9A0h76HgUIP?usp=sharing) 
 
-* **Folder Structure**
+* **文件夹结构**
 
 
   ```shell
@@ -63,9 +63,8 @@
 
   
 
-* **Recommended Environments to Run Codes (Win/Linux)**
-  
-  * python 3.7 or higher
+* **推荐的代码运行环境 (Win/Linux)**
+  * python 3.7
   * numpy 1.18.5
   * pytorch 1.7.0 (with CUDA Version 11.5)
   * torchtext 0.6.0
@@ -74,48 +73,48 @@
 
 ---
 
-### 3. Implemetation Guide
+### 3. 代码运行指导
 
-There are two jupyter notebooks in each folder. The `"Data_Preprocess.ipynb"` notebook converted the original dataset (i.e., Ma-Weibo and PHEME) to *"raw_data.csv"* files, while the `"Rumor_BERT.ipynb"` performed the rumor detection and binary (i.e., `'rumor'` or `'non-rumor'`) classification task. The specific introduction is as follows.
+在每一个文件夹下均有两个 Jupyter Notebook 文件。 `"Data_Preprocess.ipynb"` 文件将原始的谣言数据集 (即Ma-Weibo 与 PHEME) 转换为 `"raw_data.csv"` 文件,  `"Rumor_BERT.ipynb"` 文件实现了主要的谣言检测与二分类任务（即`"谣言"`或`"非谣言"`），具体的运行指导如下：
 
 * **Data_Preprocess.ipynb**
 
-  * This notebook preprocessed the original dataset and generated a *".csv"* file in *"./data"'* folder. 
-  * A **'raw_data.csv'** file has already been generated in each folder in [datasets download link](https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing), so you may alternatively skip this notebook after download the dataset and proceed to *"Rumor_BERT.ipynb"*.
+  * 该 notebook 处理原始的数据集数据并生成一个 *".csv"* 文件在 *"./data"* 文件夹下. 
+  * 在[数据集下载链接](https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing)中的每个文件夹中已经生成了一个名为 **'raw_data.csv'** 的文件，因此您可以选择跳过此 notebook，在下载数据集后继续进行 *"Rumor_BERT.ipynb"*。
 
   ---
 
 * **Rumor_BERT.ipynb**
 
-  There are 7 steps in this jupyter notebook, the final result is in Step 6 (RoBERT) and Step 7 (ToBERT) output, measured with four indicators (i.e., *accuracy*, *precision*, *recall* and *f1-score*).
+  此 notebook 共有7个步骤，最终结果在第6步（RoBERT）和第7步（ToBERT）的输出中，使用四个指标进行评估（即准确率、精确率、召回率和F1值）。
 
-  * Step 1: Process the *"raw_data.csv"* and generate the original train and test data.
-  * Step 2: Define and construct the BERT model for text classification.
-  * Step 3 & 4: Fine-tune, train and evaluate the BERT model.
-  * Step 5: Get the text embeddings and prepare datas for the final classification model.
-  * Step 6: Construct, train and evaluate the **RoBERT** (Recurrence over BERT).
-  * Step 7: Construct, train and evaluate the **ToBERT** (Transformer over BERT).
+  * 第1步：处理 "raw_data.csv" 文件并生成原始的训练和测试数据。
+  * 第2步：定义并构建用于文本分类的BERT模型。
+  * 第3步和第4步：对BERT模型进行微调、训练和评估。
+  * 第5步：获取文本嵌入并准备最终分类模型的数据。
+  * 第6步：构建、训练和评估RoBERT。
+  * 第7步：构建、训练和评估ToBERT。
 
-  *Some Extra Explanations:*
+  *一些额外的解释：*
 
-  - *The accuracy result in Step 4 is only for the BERT model, it is **NOT** the final result.*
-  - *You could alternatively use my own "pre-trained"  BERT models so you don't have to train and fine-tune the BERT model again.*
-    - *Place my trained model (links above) in "**./trained_models**" folder.*
-    - ***Skip Step 3 & Step 4**.*
+  - *第4步的准确率结果仅针对BERT模型，它**不是**最终结果。*
+  - *你可以选择使用我自己训练好的BERT模型，这样就不必再次训练和微调BERT模型。*
+    - *将我的训练好的模型（上面的链接）放置在“./trained_models”文件夹中。*
+    - ***跳过第3步和第4步***。
 
 ---
 
-### 4. Settings for Different Model Path (Additional Experiments)
+### 4. 对不同 Model Path 的设置(额外的实验)
 
-We conducted additional experiments on different settings of our proposed method to study diferent aspects of the role comments play in the rumor detection task. These additional experiments led to some very interesting findings, including further evidence that including the associated comments is beneficial, the surprising result that fixed-length segmentation with an overlap is better than natural segmentation, and the observation that the more comments the better the detector's performance. 
+我们对我们提出的方法的不同设置进行了额外的实验，以研究评论在谣言检测任务中的不同作用。这些额外的实验得出了一些非常有趣的发现，包括进一步证据表明包括相关评论是有益的，固定长度的分割与重叠比自然分割更好的意外结果，以及观察到评论越多，检测器的性能越好。
 
-To reproduce these experiment results, please change the **'model_name'** in "Rumor_BERT.ipynb" to coressponding values. Optional values and the settings are listed below.
+要重现这些实验结果，请在"Rumor_BERT.ipynb"中更改**'model_name'**为相应的值。可选的值和设置如下所示。
 
-* **text_comments** (Default), **text_only**, **comments_only**
+* **text_comments** (默认值), **text_only**, **comments_only**
 
-  * Set the 'model_path' to **'text_comments'** (Default), **'text_comments'** or **'comments_only'**.
+  * 将'model_path'设置为**'text_comments'**（默认值），**'text_comments'**或**'comments_only'**。
 
-  * Use the following lines in notebook cell *"\## Data Selection ##"*.
+  * 在笔记本单元格*"## Data Selection ##"*中使用以下代码行。
 
     * text_comments
     
@@ -143,9 +142,9 @@ To reproduce these experiment results, please change the **'model_name'** in "Ru
 
 * **comments_group1**, **comments_group2**, **comments_group3**
 
-  * Set the 'model_path' to **'comments_group1'**, **'comments_group2'** or **'comments_group3'**.
+  * 将'model_path'设置为**'comments_group1'**、**'comments_group2'**或**'comments_group3'**。
 
-  * Uncomment the corresponding lines in Cell *"\## Different Number of Comments ##"*.
+  * 在单元格*"## Different Number of Comments ##"*中取消注释相应的代码行。
 
     * comments_group1
 
@@ -181,8 +180,8 @@ To reproduce these experiment results, please change the **'model_name'** in "Ru
 
 * **natural_split**, **fixed_split**
   
-  * Set the 'model_path' to **'natural_split'** or **"fixed_split"**.
-  * In Step 1.2, Use **'get_natural_split'** or **'get_fixed_split'** function rather than 'get_split'.
+  * 将'model_path'设置为 **'natural_split'** 或 **'fixed_split'**。
+  * 在第1.2步中，使用 **'get_natural_split'** 或 **'get_fixed_split'** 函数，而不是使用 'get_split' 函数。
 
 
 

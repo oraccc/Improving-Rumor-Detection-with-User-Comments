@@ -65,7 +65,7 @@
 
 * **Recommended Environments to Run Codes (Win/Linux)**
   
-  * python 3.7 or higher
+  * python 3.7
   * numpy 1.18.5
   * pytorch 1.7.0 (with CUDA Version 11.5)
   * torchtext 0.6.0
@@ -76,11 +76,11 @@
 
 ### 3. Implemetation Guide
 
-There are two jupyter notebooks in each folder. The `"Data_Preprocess.ipynb"` notebook converted the original dataset (i.e., Ma-Weibo and PHEME) to *"raw_data.csv"* files, while the `"Rumor_BERT.ipynb"` performed the rumor detection and binary (i.e., `'rumor'` or `'non-rumor'`) classification task. The specific introduction is as follows.
+There are two jupyter notebooks in each folder. The `"Data_Preprocess.ipynb"` notebook converted the original dataset (i.e., Ma-Weibo and PHEME) to `"raw_data.csv"` files, while the `"Rumor_BERT.ipynb"` performed the rumor detection and binary (i.e., `'rumor'` or `'non-rumor'`) classification task. The specific introduction is as follows.
 
 * **Data_Preprocess.ipynb**
 
-  * This notebook preprocessed the original dataset and generated a *".csv"* file in *"./data"'* folder. 
+  * This notebook preprocessed the original dataset and generated a *".csv"* file in *"./data"* folder. 
   * A **'raw_data.csv'** file has already been generated in each folder in [datasets download link](https://drive.google.com/drive/folders/1o430G2HXg9k5cWCOkPwmhOT_7boUii8i?usp=sharing), so you may alternatively skip this notebook after download the dataset and proceed to *"Rumor_BERT.ipynb"*.
 
   ---
@@ -99,7 +99,7 @@ There are two jupyter notebooks in each folder. The `"Data_Preprocess.ipynb"` no
   *Some Extra Explanations:*
 
   - *The accuracy result in Step 4 is only for the BERT model, it is **NOT** the final result.*
-  - *You could alternatively use my own "pre-trained"  BERT models so you don't have to train and fine-tune the BERT model again.*
+  - *You could alternatively use my own trained BERT models so you don't have to train and fine-tune the BERT model again.*
     - *Place my trained model (links above) in "**./trained_models**" folder.*
     - ***Skip Step 3 & Step 4**.*
 
