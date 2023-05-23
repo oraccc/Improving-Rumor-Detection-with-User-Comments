@@ -1,4 +1,8 @@
-## Improving Rumor Detection with User Comments
+## 使用用户的评论提升谣言检测的性能
+
+**[English](https://github.com/oraccc/Improving-Rumor-Detection-with-User-Comments/blob/main/README.md)** | **中文**
+
+
 
 > Source Code for [TrustCom2022](http://www.ieee-hust-ncc.org/2022/TrustCom/) Accepted Paper " 'Comments Matter and The More The Better': Improving Rumor Detecion with User Comments".
 >

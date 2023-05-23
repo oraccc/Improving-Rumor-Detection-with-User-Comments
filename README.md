@@ -1,6 +1,6 @@
 ## Improving Rumor Detection with User Comments
 
-**English** | 简体中文
+**English** | [**中文**](https://github.com/oraccc/Improving-Rumor-Detection-with-User-Comments/blob/main/README-zh.md)
 
 
 
